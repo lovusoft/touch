@@ -12,14 +12,49 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home,
+      redirect: 'hot',
+      children: [
+        {
+          path: '/hot',
+          name: '热点',
+          component: () => import('@/components/tab/Hot.vue'),
+        },
+        {
+          path: '/roast',
+          name: '吐槽',
+          component: () => import('@/components/tab/Roast.vue'),
+        },
+        {
+          path: '/learn',
+          name: '学习',
+          component: () => import('@/components/tab/Learn.vue'),
+        },
+        {
+          path: '/find',
+          name: '寻觅',
+          component: () => import('@/components/tab/Find.vue'),
+        },
+        {
+          path: '/together',
+          name: '有约',
+          component: () => import('@/components/tab/Together.vue'),
+        },
+        {
+          path: '/mind',
+          name: '思绪',
+          component: () => import('@/components/tab/Mind.vue'),
+        },
+        {
+          path: '/secret',
+          name: '树洞',
+          component: () => import('@/components/tab/Secret.vue'),
+        },
+      ],
     },
     {
       path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue'),
+      name: '关于',
+      component: () => import('@/views/About.vue'),
     },
   ],
 });

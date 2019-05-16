@@ -1,0 +1,17 @@
+.layout {
+    width: 1140px;
+    min-height: 600px;
+    margin: 68px auto 60px auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    .main {
+        width: 820px;
+        min-height: 430px;
+    }
+
+    .side {
+        width: 296px;
+    }
+}

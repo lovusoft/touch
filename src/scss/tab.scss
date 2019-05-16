@@ -1,0 +1,20 @@
+.tab {
+    font-size: 14px;
+    line-height: 120%;
+    text-align: left;
+    border-bottom: 1px solid #e2e2e2;
+    background-color: rgba(234, 234, 239, .3);
+    padding: 10px 10px 10px 20px;
+
+    a {
+        color: #778087;
+        padding: 10px;
+        text-decoration: none;
+        word-break: break-all;
+
+        &:hover {
+            color: #555;
+            text-decoration: underline;
+        }
+    }
+}
