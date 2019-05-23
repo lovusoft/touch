@@ -7,7 +7,7 @@
     <div>
       <router-link to="/login">登录</router-link>
       <router-link to="/join">注册</router-link>
-      <router-link to="/schoool">学校</router-link>
+      <router-link to="/school">重庆师范大学</router-link>
     </div>
   </div>
 </template>

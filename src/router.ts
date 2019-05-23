@@ -56,5 +56,15 @@ export default new Router({
       name: '关于',
       component: () => import('@/views/About.vue'),
     },
+    {
+      path: '/school',
+      name: '学校',
+      component: () => import('@/views/School.vue'),
+    },
+    {
+      path: '/login',
+      name: '登录',
+      component: () => import('@/views/Login.vue'),
+    },
   ],
 });

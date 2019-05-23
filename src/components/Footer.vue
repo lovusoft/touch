@@ -21,6 +21,7 @@ export default class Footer extends Vue {}
 <style scoped lang='scss'>
 @import '@/scss/index.scss';
 .footer {
+  width: 100%;
   height: 180px;
   background-color: rgba(255, 242, 226, 0.8);
   border-top: 1px solid #e2e2e2;

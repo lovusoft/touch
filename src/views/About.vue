@@ -21,8 +21,4 @@ export default class About extends Vue {}
 
 <style scoped lang='scss'>
 @import '@/scss/index.scss';
-.chevron {
-  font-family: Lucida Grande;
-  font-weight: 500;
-}
 </style>

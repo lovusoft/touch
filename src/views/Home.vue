@@ -24,14 +24,14 @@
         </div>
       </div>
       <Toolbox></Toolbox>
+      <div class="tool card">
+        <div class="cell">
+          <span class="fade">touch小工具</span>
+        </div>
+      </div>
       <div class="feedback card">
         <div class="cell">
           <span class="fade">反馈-举报-优化建议</span>
-        </div>
-      </div>
-      <div class="today card">
-        <div class="cell">
-          <span class="fade">今日热点</span>
         </div>
       </div>
     </div>
@@ -39,7 +39,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Vue, Provide } from 'vue-property-decorator';
 import Toolbox from '@/components/Toolbox.vue';
 @Component({
   components: {
@@ -90,7 +90,7 @@ export default class Home extends Vue {}
     .feedback {
       height: 320px;
     }
-    .today {
+    .tool {
       height: 400px;
     }
   }

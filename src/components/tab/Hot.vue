@@ -1,15 +1,23 @@
 <!-- 热点 -->
 <template>
-  <div class="hot tab">
-    <router-link to="/hot/today">今日热点</router-link>
-    <router-link to="/hot/week">本周热点</router-link>
-    <router-link to="/hot/month">月榜</router-link>
+  <div class="hoy">
+    <div class="tab">
+      <a href="/hot/today">今日热点</a>
+      <router-link to="/hot/week">本周热点</router-link>
+      <router-link to="/hot/month">月榜</router-link>
+    </div>
+    <Item v-for="i in 6" :key="i"></Item>
   </div>
 </template>
 
 <script lang='ts'>
-import { Component, Prop, Vue } from 'vue-property-decorator';
-@Component
+import { Component, Prop, Vue, Provide } from 'vue-property-decorator';
+import Item from '@/components/Item.vue';
+@Component({
+  components: {
+    Item,
+  },
+})
 export default class Hot extends Vue {}
 </script>
 
