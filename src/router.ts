@@ -66,5 +66,16 @@ export default new Router({
       name: '登录',
       component: () => import('@/views/Login.vue'),
     },
+    {
+      path: '/join',
+      name: '注册',
+      component: () => import('@/views/Join.vue'),
+    },
+    // 小工具
+    {
+      path: '/drawer',
+      name: '艺术画',
+      component: () => import('@/components/SmallTools/Drawer.vue'),
+    },
   ],
 });

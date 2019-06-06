@@ -28,6 +28,7 @@
         <div class="cell">
           <span class="fade">touch小工具</span>
         </div>
+        <router-link to="drawer">个人艺术画</router-link>
       </div>
       <div class="feedback card">
         <div class="cell">
@@ -92,6 +93,23 @@ export default class Home extends Vue {}
     }
     .tool {
       height: 400px;
+      a {
+        display: inline-block;
+        margin-top: 12px;
+        cursor: pointer;
+        color: #778087;
+        background-color: transparent;
+        font-size: 13px;
+        padding: 3px 8px 3px 8px;
+        border-radius: 15px;
+        text-decoration: none;
+        outline: none;
+        border: 1px solid #e5e5e5;
+        &:hover {
+          color: #555;
+          border: 1px solid #ccc;
+        }
+      }
     }
   }
 }

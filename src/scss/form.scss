@@ -1,0 +1,56 @@
+.form {
+    display: flex;
+    justify-content: flex-start;
+
+    tr {
+        margin: 5px;
+        display: block;
+
+        a {
+            color: #778087;
+            text-decoration: none;
+
+            &:hover {
+                color: #4d5256;
+                text-decoration: underline;
+            }
+        }
+
+        input {
+            border-radius: 3px;
+            padding: 5px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            width: 320px;
+            font-family: 'Helvetica Neue', 'Luxi Sans', 'DejaVu Sans', Tahoma,
+                'Hiragino Sans GB', 'Microsoft Yahei', sans-serif;
+            box-sizing: border-box;
+            outline: none;
+            background-color: rgba(247, 245, 244, 0.3);
+        }
+
+        .verification {
+            @extend input;
+            height: 80px;
+            background-size: cover;
+        }
+
+        .submit {
+            width: 50px;
+            background-color: rgba(220, 226, 241, 0.4);
+            cursor: pointer;
+            color: #222;
+            text-shadow: 0 1px 0 #fff;
+            font-weight: 600;
+            box-shadow: 0 1px 0 rgba(66, 66, 77, 0.1);
+        }
+
+        small {
+            color: #c1c1c1;
+        }
+    }
+}
+
+.grecaptcha-badge {
+    visibility: hidden;
+}

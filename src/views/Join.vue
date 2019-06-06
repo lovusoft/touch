@@ -1,12 +1,12 @@
-<!-- 登录 -->
+<!-- 注册 -->
 <template>
-  <div class="login layout">
+  <div class="join layout">
     <div class="main card">
       <div class="cell">
         <span class="fade">
           <router-link to="/">touch</router-link>
           <span class="chevron">&nbsp;›&nbsp;</span>
-          login
+          join
         </span>
       </div>
       <div class="form content">
@@ -16,7 +16,7 @@
               <tr>
                 <td width="120" align="right">用户名&nbsp;</td>
                 <td width="auto" align="left">
-                  <input type="text" required placeholder="用户名或电子邮箱地址">
+                  <input type="text" required placeholder="用户名">
                 </td>
               </tr>
               <tr>
@@ -24,6 +24,16 @@
                 <td width="auto" align="left">
                   <input type="password" required placeholder="密码">
                 </td>
+              </tr>
+              <tr>
+                <td width="120" align="right">电子邮箱&nbsp;</td>
+                <td width="auto" align="left">
+                  <input type="email" required placeholder="邮箱">
+                </td>
+              </tr>
+              <tr>
+                <td width="120" align="right">注册答题&nbsp;</td>
+                <td width="auto" align="left"></td>
               </tr>
               <tr v-if="showVerification">
                 <td width="120" align="right">人机验证&nbsp;</td>
@@ -39,13 +49,7 @@
               <tr>
                 <td width="120" align="right"></td>
                 <td width="auto" align="left">
-                  <input class="submit" type="submit" value="登录">
-                </td>
-              </tr>
-              <tr>
-                <td width="120" align="right"></td>
-                <td width="auto" align="left">
-                  <router-link to="/">找回密码</router-link>
+                  <input class="submit" type="submit" value="注册">
                 </td>
               </tr>
               <tr>
@@ -70,35 +74,17 @@
 
 <script lang='ts'>
 import { Component, Prop, Vue } from 'vue-property-decorator';
-import { VueReCaptcha } from 'vue-recaptcha-v3';
-Vue.use(VueReCaptcha, {
-  siteKey: '6LfNoKQUAAAAADaVj6O64cZVTlblgMOETMkQDjVn',
-  loaderOptions: {
-    useRecaptchaNet: true,
-    autoHideBadge: true,
-  },
-});
-
 @Component
-export default class Login extends Vue {
-  // initial data
-  private showVerification: boolean = false;
-  private verificationImageUrl: string =
-    'https://www.v2ex.com/_captcha?once=37374';
-
-  // method
-  private recaptcha() {
-    this.$recaptcha('login').then((token) => {
-      const data = new URLSearchParams();
-      data.append('recaptchaResp', token);
-      this.axios.post('reCAPTCHA', data).then((res) => {
-        this.showVerification = res.data;
-      });
-    });
-  }
-}
+export default class Join extends Vue {}
 </script>
 
 <style scoped lang='scss'>
 @import '@/scss/index.scss';
+.form {
+  tr {
+    input {
+      width: 250px;
+    }
+  }
+}
 </style>

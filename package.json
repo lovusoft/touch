@@ -13,9 +13,12 @@
     "vue": "^2.6.10",
     "vue-axios": "^2.1.4",
     "vue-class-component": "^7.0.2",
+    "vue-cropper": "^0.4.9",
     "vue-property-decorator": "^8.1.0",
+    "vue-recaptcha-v3": "^1.5.0",
     "vue-router": "^3.0.3",
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "webpack": "^4.32.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.7.0",
